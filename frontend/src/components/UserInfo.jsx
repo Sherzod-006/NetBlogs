@@ -1,17 +1,21 @@
+import { useEffect } from "react";
 import axios from "axios";
 
-const UserInfo = ({ id }) => {
-  const conf = async (id) => {
-    try {
-      const res = await axios.get(`http://localhost:5000/api/users/${id}`);
-      if (res.status === 200) {
-        console.log(res);
+const UserInfo = ({ token, onUserFetched }) => {
+  useEffect(() => {
+    const fetchProfile = async () => {
+      try {
+        const res = await axios.get("http://localhost:5000/api/user/profile", {
+          headers: { Authorization: `Bearer ${token}` },
+        });
+        onUserFetched(res.data.username);
+      } catch (error) {
+        console.log(error);
       }
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  return conf(id);
+    };
+    if (token) fetchProfile();
+  }, [token, onUserFetched]);
+  return null;
 };
 
 export default UserInfo;
