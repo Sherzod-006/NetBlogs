@@ -13,11 +13,13 @@ app.use(express.json());
 
 //IMPORTING ROUTES
 const authMiddlewareRoute = require("./routes/AuthMiddlewareRoute");
+const ImageUploadRoute = require("./routes/ImageUploadRoute");
 const authRoutes = require("./routes/AuthRoute");
 const userRoutes = require("./routes/UserRoute");
 
 //USING ROUTES
 app.use("/api/user", authMiddlewareRoute);
+app.use("/api/image/", ImageUploadRoute);
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 
