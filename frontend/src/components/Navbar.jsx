@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGlobe,
@@ -34,16 +34,9 @@ function Navbar() {
     setUser(userData);
   };
 
-  // useEffect(() => {
-  //   const fetchProfile = async () => {
-  //     const token = localStorage.getItem("token");
-  //     const res = await axios.get("http://localhost:5000/api/user/profile", {
-  //       headers: { Authorization: `Bearer ${token}` },
-  //     });
-  //     setUserInfo(res.data);
-  //   };
-  //   fetchProfile();
-  // }, []);
+  useEffect(() => {
+    document.title = token ? `NEtBlogs | ${user}` : `NEtBlogs`;
+  }, [user, token]);
 
   return (
     <header className="sticky top-1 md:top-3 dark:bg-gray-700 bg-white text-black dark:text-white p-2 md:p-3 m-1 md:m-3 rounded-lg shadow-lg flex justify-between items-center z-50">
@@ -87,8 +80,8 @@ function Navbar() {
             navigate("/login");
           }}
           className={`${
-            token ? "hidden" : "block"
-          } bg-orange-500 text-white px-3 py-1 rounded hover:bg-orange-600 cursor-pointer shadow-lg`}
+            token ? "hidden!" : "block"
+          } hidden md:block bg-orange-500 text-white px-3 py-1 rounded hover:bg-orange-600 cursor-pointer shadow-lg`}
         >
           {" "}
           <FontAwesomeIcon icon={faUser} /> Login
@@ -100,8 +93,8 @@ function Navbar() {
             navigate("/");
           }}
           className={` ${
-            token ? "" : "hidden"
-          } bg-orange-500 text-white px-3 py-1 rounded hover:bg-orange-600 cursor-pointer shadow-lg`}
+            token ? "" : "hidden!"
+          } hidden md:block bg-orange-500 text-white px-3 py-1 rounded hover:bg-orange-600 cursor-pointer shadow-lg`}
         >
           {" "}
           <FontAwesomeIcon icon={faRightFromBracket} /> Logout
@@ -120,6 +113,8 @@ function Navbar() {
             setIsOpen(false);
           }}
           Body={NavConfig}
+          token={token}
+          setToken={setToken}
         />
       </section>
     </header>
