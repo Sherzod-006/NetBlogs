@@ -10,7 +10,7 @@ import {
 import DropDown from "./DropDown";
 import DropDownLang from "./DropDownLang";
 import Notification from "./Notification";
-import UserInfo from "./UserInfo";
+import UserName from "./UserInfo";
 
 function Navbar() {
   const NavConfig = [
@@ -27,6 +27,7 @@ function Navbar() {
   const navigate = useNavigate();
   const [user, setUser] = useState("");
   const [token, setToken] = useState(localStorage.getItem("token"));
+  const [id, setId] = useState(localStorage.getItem("id"));
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenB, setIsOpenB] = useState(false);
 
@@ -35,14 +36,14 @@ function Navbar() {
   };
 
   useEffect(() => {
-    document.title = token ? `NEtBlogs | ${user}` : `NEtBlogs`;
+    document.title = token ? `NEtBlogs | ${user.username}` : `NEtBlogs`;
   }, [user, token]);
 
   return (
     <header className="sticky top-1 md:top-3 dark:bg-gray-700 bg-white text-black dark:text-white p-2 md:p-3 m-1 md:m-3 rounded-lg shadow-lg flex justify-between items-center z-50">
-      <UserInfo token={token} onUserFetched={handleUserFetched} />
+      <UserName token={token} id={id} onUserFetched={handleUserFetched} />
       <Notification
-        message={token ? `Welcome ${user}` : `Welcome to NetNews!`}
+        message={token ? `Welcome ${user.username}` : `Welcome to NetNews!`}
       />
       <Link to="/" className="text-3xl font-bold">
         NetBlogs
@@ -89,7 +90,9 @@ function Navbar() {
         <button
           onClick={() => {
             localStorage.removeItem("token");
+            localStorage.removeItem("id");
             setToken("");
+            setId("");
             navigate("/");
           }}
           className={` ${
@@ -116,6 +119,14 @@ function Navbar() {
           token={token}
           setToken={setToken}
         />
+        <Link to="/profile">
+          <img
+            src={user.image}
+            alt="Profile image"
+            width={32}
+            className={`${token ? "" : "hidden!"} rounded-full`}
+          />
+        </Link>
       </section>
     </header>
   );

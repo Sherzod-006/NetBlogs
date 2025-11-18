@@ -15,6 +15,24 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  image: {
+    type: String,
+    default:
+      "https://res.cloudinary.com/dzqw71hhs/image/upload/v1763459515/myapp/ud5aypsamaghoakgmwoc.jpg",
+  },
+  age: {
+    type: Number,
+    default: 0,
+  },
+  country: {
+    type: String,
+    default: "",
+  },
+  gender: {
+    type: String,
+    required: false,
+    enum: ["male", "female"],
+  },
 });
 
 module.exports = mongoose.model("User", UserSchema);

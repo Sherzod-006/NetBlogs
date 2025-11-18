@@ -28,11 +28,11 @@ exports.getUserById = async (req, res) => {
 //UPDATE USER
 exports.updateUser = async (req, res) => {
   const { id } = req.params;
-  const { username, email } = req.body;
+  const { username, email, image, age, country, gender } = req.body;
   try {
     const user = await User.findByIdAndUpdate(
       id,
-      { username, email },
+      { username, email, image, age, country, gender },
       {
         new: true,
       }
