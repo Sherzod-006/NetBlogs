@@ -122,9 +122,11 @@ function Navbar() {
         <Link to="/profile">
           <img
             src={user.image}
-            alt="Profile image"
+            alt="image"
             width={32}
-            className={`${token ? "" : "hidden!"} rounded-full`}
+            className={`${
+              token ? "" : "hidden!"
+            } rounded-full border-2 dark:border-0`}
           />
         </Link>
       </section>

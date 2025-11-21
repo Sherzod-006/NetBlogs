@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
+  const api = import.meta.env.VITE_API_URL;
   const navigate = useNavigate();
   const [message, setMessage] = useState("");
   const [formData, setFormData] = useState({
@@ -17,10 +18,7 @@ const LoginPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(
-        "http://localhost:5000/api/auth/login",
-        formData
-      );
+      const res = await axios.post(`${api}/api/auth/login`, formData);
       if (res.status === 200) {
         localStorage.setItem("token", res.data.token);
         localStorage.setItem("id", res.data.user.id);
