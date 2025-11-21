@@ -36,7 +36,7 @@ function Navbar() {
   };
 
   useEffect(() => {
-    document.title = token ? `NEtBlogs | ${user.username}` : `NEtBlogs`;
+    document.title = token ? `NEtBlogss | ${user.username}` : `NEtBlogs`;
   }, [user, token]);
 
   return (
