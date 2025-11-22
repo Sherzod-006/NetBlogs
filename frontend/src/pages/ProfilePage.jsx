@@ -70,6 +70,24 @@ const ProfilePage = () => {
       setMessage(error.message);
     }
   };
+  const handleChange = async (e) => {
+    setIsLoading(true);
+    const formData = new FormData();
+    formData.append("image", e.target.files[0]);
+    formData.append("userId", user.id);
+    try {
+      const res = await fetch(`${api}/api/upload`, {
+        method: "POST",
+        body: formData,
+      });
+      const data = await res.json();
+      console.log(data);
+      setMessage("Profile Image Updated Successfully");
+      setIsLoading(false);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   if (isLoading) return <Loading />;
 
@@ -93,7 +111,7 @@ const ProfilePage = () => {
         />
         <label className="relative left-25 bottom-5 cursor-pointer">
           <FontAwesomeIcon icon={faPenToSquare} />
-          <input className="hidden" type="file" />
+          <input onChange={handleChange} className="hidden" type="file" />
         </label>
         <h1 className="text-3xl font-bold">
           Hello, <span className="text-orange-500">{user.username}</span>
