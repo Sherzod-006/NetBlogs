@@ -9,7 +9,7 @@ const upload = multer({ storage });
 router.post("/upload/:id", upload.single("image"), async (req, res) => {
   const imageUrl = req.file.path; // Cloudinary URL
   res.json({ message: "Image Uploaded", imageUrl, userId: req.params.id });
-  User.findByIdAndUpdate(req.params.id, { profileImage: imageUrl });
+  await User.findByIdAndUpdate(req.params.id, { image: imageUrl });
 });
 
 module.exports = router;
