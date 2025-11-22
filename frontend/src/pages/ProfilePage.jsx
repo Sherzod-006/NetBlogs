@@ -76,12 +76,8 @@ const ProfilePage = () => {
     formData.append("image", e.target.files[0]);
     formData.append("userId", user.id);
     try {
-      const res = await fetch(`${api}/api/upload`, {
-        method: "POST",
-        body: formData,
-      });
-      const data = await res.json();
-      console.log(data);
+      const res = await axios.post(`${api}/api/image/upload`, formData);
+      console.log(res.data);
       setMessage("Profile Image Updated Successfully");
       setIsLoading(false);
     } catch (error) {
