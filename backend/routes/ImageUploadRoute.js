@@ -6,11 +6,10 @@ const User = require("../models/UserModel");
 const router = express.Router();
 const upload = multer({ storage });
 
-router.post("/upload", upload.single("image"), async (req, res) => {
-  const userId = req.body.userId;
+router.post("/upload/:id", upload.single("image"), async (req, res) => {
   const imageUrl = req.file.path; // Cloudinary URL
-  res.json({ message: "Image Uploaded", imageUrl, userId });
-  User.findByIdAndUpdate(userId, { profileImage: imageUrl });
+  res.json({ message: "Image Uploaded", imageUrl, userId: req.params.id });
+  User.findByIdAndUpdate(req.params.id, { profileImage: imageUrl });
 });
 
 module.exports = router;
