@@ -41,7 +41,8 @@ function Navbar() {
     document.title = token ? `NEtBlogs | ${user.username}` : `NEtBlogs`;
     if (!user) {
       setIsLoading(true);
-    } else {
+    }
+    if (user || !token) {
       setIsLoading(false);
     }
   }, [user, token]);
