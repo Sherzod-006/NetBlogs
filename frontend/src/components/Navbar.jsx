@@ -11,6 +11,7 @@ import DropDown from "./DropDown";
 import DropDownLang from "./DropDownLang";
 import Notification from "./Notification";
 import UserName from "./UserInfo";
+import Loading from "../components/Loading";
 
 function Navbar() {
   const NavConfig = [
@@ -26,6 +27,7 @@ function Navbar() {
   ];
   const navigate = useNavigate();
   const [user, setUser] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const [token, setToken] = useState(localStorage.getItem("token"));
   const [id, setId] = useState(localStorage.getItem("id"));
   const [isOpen, setIsOpen] = useState(false);
@@ -37,7 +39,14 @@ function Navbar() {
 
   useEffect(() => {
     document.title = token ? `NEtBlogs | ${user.username}` : `NEtBlogs`;
+    if (!user) {
+      setIsLoading(true);
+    } else {
+      setIsLoading(false);
+    }
   }, [user, token]);
+
+  if (isLoading) return <Loading />;
 
   return (
     <header className="sticky top-1 md:top-3 dark:bg-gray-700 bg-white text-black dark:text-white p-2 md:p-3 m-1 md:m-3 rounded-lg shadow-lg flex justify-between items-center z-50">
