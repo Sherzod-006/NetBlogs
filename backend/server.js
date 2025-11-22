@@ -8,7 +8,7 @@ const cors = require("cors");
 dotenv.config();
 const app = express();
 
-app.use(cors({ origin: "*" }));
+app.use(cors({ origin: "*", methods: "GET,POST,PUT,DELETE,PATCH" }));
 app.use(express.json());
 
 //IMPORTING ROUTES
