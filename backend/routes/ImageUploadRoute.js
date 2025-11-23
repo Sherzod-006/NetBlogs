@@ -10,13 +10,16 @@ router.post("/upload/:id", upload.single("image"), async (req, res) => {
   const user = await User.findById(req.params.id);
   if (!user) return res.status(404).json({ message: "User not found" });
 
-  if (user.profileImagePublicId) {
-    await cloudinary.uploader.destroy(user.profileImagePublicId);
+  if (user.image) {
+    await cloudinary.uploader.destroy(user.image);
   }
 
-  const imageUrl = req.file.path; // Cloudinary URL
-  res.json({ message: "Image Uploaded", imageUrl, userId: req.params.id });
-  await User.findByIdAndUpdate(req.params.id, { image: imageUrl });
+  try {
+    const imageUrl = req.file.path; // Cloudinary URL
+    await User.findByIdAndUpdate(req.params.id, { image: imageUrl });
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 module.exports = router;
