@@ -2,8 +2,7 @@ const express = require("express");
 const { storage } = require("../db/Cloudinary");
 const multer = require("multer");
 const User = require("../models/UserModel");
-import { v2 as cloudinary } from "cloudinary";
-
+const cloudinary = require("cloudinary").v2;
 const router = express.Router();
 const upload = multer({ storage });
 
