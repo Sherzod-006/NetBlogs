@@ -71,11 +71,11 @@ const ProfilePage = () => {
     }
   };
   const handleChange = async (e) => {
-    setIsLoading(true);
     const formData = new FormData();
     formData.append("image", e.target.files[0]);
     formData.append("userId", user.id);
     try {
+      setIsLoading(true);
       const res = await axios.post(`${api}/api/image/upload/${id}`, formData);
       console.log(res.data);
       setMessage("Profile Image Updated Successfully");
