@@ -20,6 +20,10 @@ const UserSchema = new mongoose.Schema({
     default:
       "https://res.cloudinary.com/dzqw71hhs/image/upload/v1763459515/myapp/ud5aypsamaghoakgmwoc.jpg",
   },
+  imageId: {
+    type: String,
+    default: "",
+  },
   age: {
     type: Number,
     default: 0,
