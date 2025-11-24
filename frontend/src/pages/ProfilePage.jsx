@@ -101,7 +101,7 @@ const ProfilePage = () => {
       <UserName token={token} id={id} onUserFetched={handleUserFetched} />
       <section className="flex mx-auto items-center flex-col">
         <img
-          className="rounded-full w-35 md:w-40 mt-5 border-6 border-gray-400"
+          className="rounded-full object-cover w-35 h-35 md:w-40 md:h-40 mt-5 border-6 border-gray-400"
           src={user.image}
           alt="profile image"
         />
