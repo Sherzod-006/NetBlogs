@@ -18,11 +18,11 @@ const UserSchema = new mongoose.Schema({
   image: {
     type: String,
     default:
-      "https://res.cloudinary.com/dzqw71hhs/image/upload/v1763459515/myapp/ud5aypsamaghoakgmwoc.jpg",
+      "https://res.cloudinary.com/dzqw71hhs/image/upload/v1764101163/myapp/esf0zc0am5rzkniytwk5.jpg",
   },
   imageId: {
     type: String,
-    default: "myapp/ud5aypsamaghoakgmwoc",
+    default: "myapp/esf0zc0am5rzkniytwk5",
   },
   age: {
     type: Number,
