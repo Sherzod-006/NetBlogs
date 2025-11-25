@@ -22,7 +22,7 @@ const UserSchema = new mongoose.Schema({
   },
   imageId: {
     type: String,
-    default: "",
+    default: "myapp/ud5aypsamaghoakgmwoc",
   },
   age: {
     type: Number,

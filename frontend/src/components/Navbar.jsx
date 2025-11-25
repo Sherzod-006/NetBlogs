@@ -133,10 +133,9 @@ function Navbar() {
           <img
             src={user.image}
             alt="image"
-            width={32}
             className={`${
               token ? "" : "hidden!"
-            } rounded-full border-2 dark:border-0`}
+            } rounded-full w-9 h-9 object-cover border-2 dark:border-0`}
           />
         </Link>
       </section>
