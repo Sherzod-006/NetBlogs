@@ -1,6 +1,6 @@
 const HomePage = () => {
   return (
-    <ul className="bg-white dark:bg-gray-700 text-black dark:text-white h-170  md:h-130 md:w-2/3 opacity-70 m-1 md:m-3 rounded-lg shadow-lg p-2 md:p-3 overflow-auto">
+    <ul className="bg-white dark:bg-gray-700 text-black dark:text-white h-170  md:h-130 md:w-2/3 opacity-70 m-1 md:m-3 rounded-lg shadow-lg p-2 md:p-3 overflow-auto border-2 border-gray-300 dark:border-gray-600">
       <li>
         <section className="flex space-x-2 md:space-x-4 ">
           <img
@@ -16,7 +16,7 @@ const HomePage = () => {
             />
           </div>
         </section>
-        <section>
+        <section className="flex justify-around mx-2 md:mx-4 w-3/4">
           <button>Like</button>
           <button>Comment</button>
           <button>Share</button>
