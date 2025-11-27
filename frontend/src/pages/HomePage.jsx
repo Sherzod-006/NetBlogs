@@ -1,8 +1,8 @@
 const HomePage = () => {
   return (
     <div>
-      <main className="bg-white dark:bg-gray-700 text-black dark:text-white h-170  md:h-130 md:w-2/3 opacity-70 m-1 md:m-3 rounded-lg shadow-lg p-2 md:p-3 overflow-auto scrollbar-hide">
-        hhhhs vitae saepe adipisci at quo necessitatibus deserunt quia nostrum
+      <main className="bg-white dark:bg-gray-700 text-black dark:text-white h-170  md:h-130 md:w-2/3 opacity-70 m-1 md:m-3 rounded-lg shadow-lg p-2 md:p-3 overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
+        sher vitae saepe adipisci at quo necessitatibus deserunt quia nostrum
         aliquam repellat rem nam. Culpa ipsum voluptates quia quas neque labore
         dolor optio quae dolorem! Labore ipsa porro aspernatur, magnam dolor
         quos assumenda corporis temporibus quae debitis sit commodi? Neque error
