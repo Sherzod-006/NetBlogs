@@ -5,7 +5,7 @@ const HomePage = () => {
         <section className="flex space-x-2 md:space-x-4 ">
           <img
             src="https://res.cloudinary.com/dzqw71hhs/image/upload/v1764249504/myapp/kidj0nlfkhkj5ugmx1ne.jpg"
-            className="rounded-full w-9 h-9 object-cover m-4"
+            className="rounded-full w-9 h-9 object-cover mt-4"
           />
           <div className="space-y-1 md:space-y-2">
             <h1 className="font-medium text-2xl">Welcome to NetBlogs</h1>
@@ -19,9 +19,15 @@ const HomePage = () => {
           </div>
         </section>
         <section className="flex justify-end space-x-4 mt-2 md:mt-4">
-          <button>Like</button>
-          <button>Comment</button>
-          <button>Share</button>
+          <button className="hover:text-red-700 focus:text-red-800">
+            Like
+          </button>
+          <button className="hover:text-red-700 focus:text-red-800">
+            Comment
+          </button>
+          <button className="hover:text-red-700 focus:text-red-800">
+            Share
+          </button>
         </section>
       </li>
     </ul>
