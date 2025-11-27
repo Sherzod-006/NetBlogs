@@ -2,8 +2,8 @@ const HomePage = () => {
   return (
     <div>
       <main
-        className="bg-white dark:bg-gray-700 text-black dark:text-white h-170  md:h-130 md:w-2/3 opacity-70 m-1 md:m-3 rounded-lg shadow-lg p-2 md:p-3 overflow-auto "
-        style={{ overflowY: "scroll", height: "300px" }}
+        className="bg-white dark:bg-gray-700 text-black dark:text-white h-170  md:h-130 md:w-2/3 opacity-70 m-1 md:m-3 rounded-lg shadow-lg p-2 md:p-3  "
+        style={{ overflow: "hidden", scrollbarGutter: "stable" }}
       >
         dass vitae saepe adipisci at quo necessitatibus deserunt quia nostrum
         aliquam repellat rem nam. Culpa ipsum voluptates quia quas neque labore
