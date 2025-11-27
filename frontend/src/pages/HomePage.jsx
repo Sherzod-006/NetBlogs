@@ -16,12 +16,12 @@ const HomePage = () => {
               src="https://res.cloudinary.com/dzqw71hhs/image/upload/v1763387692/main-sample.png"
               alt=""
             />
+            <section className="flex justify-around md:mx-4 w-4/5  border-b-4 border-gray-500 dark:border-gray-300 mx-auto my-2 md:my-4 p-2">
+              <button>Like</button>
+              <button>Comment</button>
+              <button>Share</button>
+            </section>
           </div>
-          <section className="flex justify-around md:mx-4 w-4/5  border-b-4 border-gray-500 dark:border-gray-300 mx-auto my-2 md:my-4 p-2">
-            <button>Like</button>
-            <button>Comment</button>
-            <button>Share</button>
-          </section>
         </section>
       </li>
     </ul>
