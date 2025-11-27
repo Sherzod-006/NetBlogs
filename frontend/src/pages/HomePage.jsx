@@ -16,7 +16,7 @@ const HomePage = () => {
             />
           </div>
         </section>
-        <section className="flex justify-around mx-2 md:mx-4 w-3/4">
+        <section className="flex justify-around mx-2 md:mx-4 w-4/5">
           <button>Like</button>
           <button>Comment</button>
           <button>Share</button>
