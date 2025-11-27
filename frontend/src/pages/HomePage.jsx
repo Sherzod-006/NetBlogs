@@ -1,28 +1,12 @@
 const HomePage = () => {
   return (
     <div>
-      <main className="bg-white dark:bg-gray-700 text-black dark:text-white h-170  md:h-130 md:w-200 opacity-70 m-1 md:m-3 rounded-lg shadow-lg p-2 md:p-3 scroll-hidden">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error nemo
-        voluptatibus, aliquid repudiandae, quidem, nam incidunt vel sunt
-        reiciendis repellat ea aspernatur iusto. Minima, optio praesentium!
-        Quidem sint minus perferendis aliquid, impedit corporis, hic voluptatum
-        ducimus tempora voluptas, ut debitis nemo est odio natus a? Nemo
-        possimus eaque, praesentium eum ducimus ad obcaecati culpa cupiditate.
-        Nulla eos in laborum, dolore, harum ipsam dicta qui tempore modi iure
-        ad, quasi reiciendis dolores cum distinctio enim officiis quis? Labore
-        assumenda reiciendis autem impedit at fugiat ipsa. Maxime non expedita,
-        numquam consectetur autem perferendis adipisci iste necessitatibus est
-        nobis tenetur libero possimus quos! Voluptates fuga molestiae omnis!
-        Excepturi numquam voluptatum, corporis earum enim harum cupiditate
-        expedita reprehenderit aliquid totam aperiam dolor accusantium, nisi
-        consequatur doloribus! Officiis ad commodi cum hic eum mollitia,
-        exercitationem vel tenetur! Labore reprehenderit quibusdam consequatur.
-        Eius culpa beatae eaque obcaecati, corporis hic iusto vitae saepe
+      <main className="bg-white dark:bg-gray-700 text-black dark:text-white h-170  md:h-130 md:w-200 opacity-70 m-1 md:m-3 rounded-lg shadow-lg p-2 md:p-3 scroll-auto scrollbar-hide"> vitae saepe
         adipisci at quo necessitatibus deserunt quia nostrum aliquam repellat
         rem nam. Culpa ipsum voluptates quia quas neque labore dolor optio quae
         dolorem! Labore ipsa porro aspernatur, magnam dolor quos assumenda
         corporis temporibus quae debitis sit commodi? Neque error doloribus
-        quaerat, magnam architecto illum veritatis voluptatem rem tempore hic
+        quaerat,  architecto illum veritatis voluptatem rem tempore hic
         perferendis. Exercitationem commodi nisi aperiam rerum assumenda quod
         ratione inventore voluptatum eos cum quidem soluta asperiores alias,
         doloribus, veritatis veniam consectetur voluptatem quibusdam aspernatur
