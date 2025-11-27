@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 
 const RootLayout = () => {
   return (
-    <main className="dark:bg-gray-900 bg-gray-100 min-h-900 flex flex-col">
+    <main className="dark:bg-gray-900 bg-gray-100 flex flex-col">
       <Navbar />
       <main>
         <Outlet />
