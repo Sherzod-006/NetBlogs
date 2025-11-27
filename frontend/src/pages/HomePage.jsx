@@ -7,9 +7,11 @@ const HomePage = () => {
             src="https://res.cloudinary.com/dzqw71hhs/image/upload/v1764249504/myapp/kidj0nlfkhkj5ugmx1ne.jpg"
             className="rounded-full w-9 h-9 object-cover"
           />
-          <div>
-            <h1>Welcome to NetBlogs</h1>
-            <p>Your go-to platform for insightful blogs and articles.</p>
+          <div className="space-y-1">
+            <h1 className="font-medium text-2xl">Welcome to NetBlogs</h1>
+            <p className="text-lg">
+              Your go-to platform for insightful blogs and articles.
+            </p>
             <img
               src="https://res.cloudinary.com/dzqw71hhs/image/upload/v1763387692/main-sample.png"
               alt=""
