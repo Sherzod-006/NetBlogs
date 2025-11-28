@@ -24,7 +24,7 @@ const HomePage = () => {
               className="w-auto max-h-60 rounded-lg object-cover"
             />
           </section>
-          <section className="flex flex-col my-auto space-y-2 md:space-y-4">
+          <section className="flex flex-col my-auto space-y-4 md:space-y-6 text-2xl md:text-3xl">
             <button className="hover:text-red-500 focus:text-red-500 font-bold">
               <FontAwesomeIcon icon={faHeart} />
               <h1 className="hidden md:block">Like</h1>
