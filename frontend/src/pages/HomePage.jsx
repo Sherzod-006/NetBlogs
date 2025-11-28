@@ -14,7 +14,7 @@ const HomePage = () => {
             </p>
             <img
               src="https://res.cloudinary.com/dzqw71hhs/image/upload/v1763387692/main-sample.png"
-              className="w-auto h-auto rounded-lg object-cover"
+              className="w-auto max-h-80 rounded-lg object-cover"
             />
           </div>
         </section>
