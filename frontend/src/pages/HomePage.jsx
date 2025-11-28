@@ -19,13 +19,13 @@ const HomePage = () => {
           </div>
         </section>
         <section className="flex justify-end space-x-4 mt-2 md:mt-4">
-          <button className="hover:text-red-700 focus:text-red-500 font-bold">
+          <button className="hover:text-red-500 focus:text-red-500 font-bold">
             Like
           </button>
-          <button className="hover:text-red-700 focus:text-red-500 font-bold">
+          <button className="hover:text-red-500 focus:text-red-500 font-bold">
             Comment
           </button>
-          <button className="hover:text-red-700 focus:text-red-500 font-bold">
+          <button className="hover:text-red-500 focus:text-red-500 font-bold">
             Share
           </button>
         </section>
