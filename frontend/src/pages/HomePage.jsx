@@ -98,7 +98,7 @@ const HomePage = () => {
             <RichTextEditor.ControlsGroup>
               <RichTextEditor.Link />
               <RichTextEditor.Unlink />
-              <RichTextEditor.Image />
+              {/* <RichTextEditor.Image /> */}
             </RichTextEditor.ControlsGroup>
           </RichTextEditor.Toolbar>
 
