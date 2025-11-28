@@ -45,7 +45,7 @@ const HomePage = () => {
           <input
             type="text"
             placeholder="Add a comment..."
-            className="w-full p-2 rounded-lg border border-gray-300 outline-none focus:ring-2 focus:border-orange-500 overflow-x-none my-2"
+            className="w-full p-2 rounded-lg border border-gray-300 outline-none focus:border-orange-500 overflow-x-none my-2"
           />
           <button
             type="submit"
