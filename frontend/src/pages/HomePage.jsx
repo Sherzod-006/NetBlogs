@@ -39,6 +39,19 @@ const HomePage = () => {
             Share
           </button>
         </main>
+        <form>
+          <input
+            type="text"
+            placeholder="Add a comment..."
+            className="w-full md:w-2/3 p-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <button
+            type="submit"
+            className="ml-2 p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            Post
+          </button>
+        </form>
       </li>
     </ul>
   );
