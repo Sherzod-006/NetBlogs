@@ -43,7 +43,7 @@ const HomePage = () => {
           <input
             type="text"
             placeholder="Add a comment..."
-            className="w-full h-full p-2 rounded-lg border border-gray-300 outline-none focus:ring-2 focus:ring-orange-500"
+            className="w-full h-1/2 p-2 rounded-lg border border-gray-300 outline-none focus:ring-2 focus:ring-orange-500"
           />
         </form>
       </li>
