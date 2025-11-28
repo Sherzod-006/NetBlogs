@@ -1,3 +1,10 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHeart,
+  faComment,
+  faPaperPlane,
+} from "@fortawesome/free-solid-svg-icons";
+
 const HomePage = () => {
   return (
     <ul className="bg-white dark:bg-gray-700 text-black dark:text-white h-170  md:h-130 md:w-2/3 opacity-70 m-1 md:m-3 rounded-lg shadow-lg p-2 md:p-3 overflow-auto">
@@ -17,15 +24,18 @@ const HomePage = () => {
               className="w-auto max-h-60 rounded-lg object-cover"
             />
           </section>
-          <section className="flex flex-col my-auto">
+          <section className="flex flex-col my-auto space-y-2 md:space-y-4">
             <button className="hover:text-red-500 focus:text-red-500 font-bold">
-              Like
+              <FontAwesomeIcon icon={faHeart} />
+              <h1 className="hidden md:block">Like</h1>
             </button>
             <button className="hover:text-red-500 focus:text-red-500 font-bold">
-              Comment
+              <FontAwesomeIcon icon={faComment} />
+              <h1 className="hidden md:block">Comment</h1>
             </button>
             <button className="hover:text-red-500 focus:text-red-500 font-bold">
-              Share
+              <FontAwesomeIcon icon={faPaperPlane} />
+              <h1 className="hidden md:block">Share</h1>
             </button>
           </section>
         </main>
