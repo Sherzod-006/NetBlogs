@@ -43,17 +43,8 @@ const HomePage = () => {
           <input
             type="text"
             placeholder="Add a comment..."
-            className="w-full md:w-2/3 p-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            onInput={(e) => {
-              e.target.style.width = `${e.target.value.length + 1}ch`;
-            }}
+            className="w-full h-full p-2 rounded-lg border border-gray-300 outline-none focus:ring-2 focus:ring-orange-500"
           />
-          <button
-            type="submit"
-            className="ml-2 p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          >
-            Post
-          </button>
         </form>
       </li>
     </ul>
