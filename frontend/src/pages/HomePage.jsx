@@ -8,7 +8,7 @@ import {
 const HomePage = () => {
   return (
     <ul className="bg-white dark:bg-gray-700 text-black dark:text-white h-170  md:h-130 md:w-2/3 opacity-70 m-1 md:m-3 rounded-lg shadow-lg p-2 md:p-3 overflow-auto">
-      <li className="border-b-4 border-gray-500 dark:border-gray-300 mb-2 cursor-pointer">
+      <li className="border-b-4 border-gray-500 dark:border-gray-300 mb-2 cursor-pointer flex md:flex-row">
         <main className="flex space-x-2 md:space-x-4 ">
           <img
             src="https://res.cloudinary.com/dzqw71hhs/image/upload/v1764249504/myapp/kidj0nlfkhkj5ugmx1ne.jpg"
@@ -24,20 +24,20 @@ const HomePage = () => {
               className="w-auto max-h-60 rounded-lg object-cover"
             />
           </section>
-          <section className="flex flex-col my-auto space-y-4 md:space-y-6 text-2xl md:text-3xl">
-            <button className="hover:text-red-500 focus:text-red-500 font-bold">
-              <FontAwesomeIcon icon={faHeart} />
-              <h1 className="hidden md:block">Like</h1>
-            </button>
-            <button className="hover:text-red-500 focus:text-red-500 font-bold">
-              <FontAwesomeIcon icon={faComment} />
-              <h1 className="hidden md:block">Comment</h1>
-            </button>
-            <button className="hover:text-red-500 focus:text-red-500 font-bold">
-              <FontAwesomeIcon icon={faPaperPlane} />
-              <h1 className="hidden md:block">Share</h1>
-            </button>
-          </section>
+        </main>
+        <main className="flex flex-col my-auto space-y-4 md:space-y-6 text-md md:text-xl">
+          <button className="hover:text-red-500 focus:text-red-500 font-bold">
+            <FontAwesomeIcon icon={faHeart} />
+            <h1 className="hidden md:block">Like</h1>
+          </button>
+          <button className="hover:text-red-500 focus:text-red-500 font-bold">
+            <FontAwesomeIcon icon={faComment} />
+            <h1 className="hidden md:block">Comment</h1>
+          </button>
+          <button className="hover:text-red-500 focus:text-red-500 font-bold">
+            <FontAwesomeIcon icon={faPaperPlane} />
+            <h1 className="hidden md:block">Share</h1>
+          </button>
         </main>
       </li>
     </ul>
