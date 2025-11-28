@@ -49,7 +49,7 @@ const HomePage = () => {
           />
           <button
             type="submit"
-            className="text-orange-500 absolute right-10 bottom-5"
+            className="text-orange-500 absolute right-7 bottom-3"
           >
             <FontAwesomeIcon icon={faPaperPlane} />
           </button>
