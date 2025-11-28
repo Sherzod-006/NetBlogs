@@ -25,18 +25,18 @@ const HomePage = () => {
             />
           </section>
         </main>
-        <main className="flex flex-col my-auto space-y-4 md:space-y-6 text-md md:text-xl">
+        <main className="flex flex-row md:flex-col mx-auto my-2 md:my-auto space-x-4 md:space-y-6 text-md md:text-xl">
           <button className="hover:text-red-500 focus:text-red-500 font-bold">
             <FontAwesomeIcon icon={faHeart} />
-            <h1 className="hidden md:block">Like</h1>
+            Like
           </button>
           <button className="hover:text-red-500 focus:text-red-500 font-bold">
             <FontAwesomeIcon icon={faComment} />
-            <h1 className="hidden md:block">Comment</h1>
+            Comment
           </button>
           <button className="hover:text-red-500 focus:text-red-500 font-bold">
             <FontAwesomeIcon icon={faPaperPlane} />
-            <h1 className="hidden md:block">Share</h1>
+            Share
           </button>
         </main>
       </li>
