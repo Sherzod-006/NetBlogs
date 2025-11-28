@@ -14,18 +14,18 @@ const HomePage = () => {
             </p>
             <img
               src="https://res.cloudinary.com/dzqw71hhs/image/upload/v1763387692/main-sample.png"
-              className="w-auto max-h-80 rounded-lg object-cover"
+              className="w-auto max-h-60 rounded-lg object-cover"
             />
           </div>
         </section>
         <section className="flex justify-end space-x-4 mt-2 md:mt-4">
-          <button className="hover:text-red-700 focus:text-red-800 font-bold">
+          <button className="hover:text-red-700 focus:text-red-500 font-bold">
             Like
           </button>
-          <button className="hover:text-red-700 focus:text-red-800 font-bold">
+          <button className="hover:text-red-700 focus:text-red-500 font-bold">
             Comment
           </button>
-          <button className="hover:text-red-700 focus:text-red-800 font-bold">
+          <button className="hover:text-red-700 focus:text-red-500 font-bold">
             Share
           </button>
         </section>
