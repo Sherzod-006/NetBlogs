@@ -4,8 +4,12 @@ import {
   faComment,
   faPaperPlane,
 } from "@fortawesome/free-solid-svg-icons";
+import { RichTextEditor } from "@mantine/rte";
+import { useState } from "react";
 
 const HomePage = () => {
+  const [value, setValue] = useState("<p>Blog yozing...</p>");
+
   return (
     <main className="flex">
       <ul className="bg-white dark:bg-gray-700 text-black dark:text-white h-170  md:h-130 md:w-2/4 m-1 md:m-3 rounded-lg shadow-lg p-2 md:p-3 overflow-auto">
@@ -57,7 +61,58 @@ const HomePage = () => {
           </form>
         </li>
       </ul>
-      <main className="bg-white dark:bg-gray-700 text-black dark:text-white h-170  md:h-130 md:w-2/4 m-1 md:m-3 rounded-lg shadow-lg p-2 md:p-3 overflow-auto"></main>
+      <main className="bg-white dark:bg-gray-700 text-black dark:text-white h-170  md:h-130 md:w-2/4 m-1 md:m-3 rounded-lg shadow-lg p-2 md:p-3 overflow-auto">
+        <div className="max-w-3xl mx-auto mt-10">
+          <RichTextEditor value={value} onChange={setValue}>
+            <RichTextEditor.Toolbar sticky stickyOffset={60}>
+              {/* Matn formatlash */}
+              <RichTextEditor.ControlsGroup>
+                <RichTextEditor.Bold />
+                <RichTextEditor.Italic />
+                <RichTextEditor.Underline />
+                <RichTextEditor.Strikethrough />
+                <RichTextEditor.ClearFormatting />
+                <RichTextEditor.Highlight />
+              </RichTextEditor.ControlsGroup>
+
+              {/* Sarlavhalar */}
+              <RichTextEditor.ControlsGroup>
+                <RichTextEditor.H1 />
+                <RichTextEditor.H2 />
+                <RichTextEditor.H3 />
+              </RichTextEditor.ControlsGroup>
+
+              {/* Bloklar */}
+              <RichTextEditor.ControlsGroup>
+                <RichTextEditor.Blockquote />
+                <RichTextEditor.CodeBlock />
+                <RichTextEditor.Hr />
+              </RichTextEditor.ControlsGroup>
+
+              {/* Ro‘yxatlar */}
+              <RichTextEditor.ControlsGroup>
+                <RichTextEditor.BulletList />
+                <RichTextEditor.OrderedList />
+              </RichTextEditor.ControlsGroup>
+
+              {/* Link va rasm */}
+              <RichTextEditor.ControlsGroup>
+                <RichTextEditor.Link />
+                <RichTextEditor.Unlink />
+                <RichTextEditor.Image />
+              </RichTextEditor.ControlsGroup>
+            </RichTextEditor.Toolbar>
+
+            <RichTextEditor.Content />
+          </RichTextEditor>
+
+          {/* Preview */}
+          <div className="mt-6 p-4 border rounded bg-white shadow">
+            <h2 className="text-lg font-semibold mb-2">Preview:</h2>
+            <div dangerouslySetInnerHTML={{ __html: value }} />
+          </div>
+        </div>
+      </main>
     </main>
   );
 };
