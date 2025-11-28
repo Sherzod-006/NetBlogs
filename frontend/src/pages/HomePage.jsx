@@ -47,11 +47,9 @@ const HomePage = () => {
             placeholder="Add a comment..."
             className="w-full p-2 rounded-lg border border-gray-300 outline-none focus:ring-2 focus:border-orange-500 overflow-x-none my-2"
           />
-          <input
-            type="button"
-            value="Post Comment"
-            className="bg-orange-500 text-white rounded-lg px-4 py-2 hover:bg-orange-600 cursor-pointer"
-          />
+          <button className="text-orange-500">
+            <FontAwesomeIcon icon={faPaperPlane} />
+          </button>
         </form>
       </li>
     </ul>
