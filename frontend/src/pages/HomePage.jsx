@@ -7,7 +7,7 @@ import {
 
 const HomePage = () => {
   return (
-    <>
+    <main className="flex">
       <ul className="bg-white dark:bg-gray-700 text-black dark:text-white h-170  md:h-130 md:w-2/4 m-1 md:m-3 rounded-lg shadow-lg p-2 md:p-3 overflow-auto">
         <li className="border-b-4 border-gray-500 dark:border-gray-300 mb-2 cursor-pointer flex flex-col space-y-2">
           <div className="flex md:flex-row flex-col">
@@ -58,7 +58,7 @@ const HomePage = () => {
         </li>
       </ul>
       <main className="bg-white dark:bg-gray-700 text-black dark:text-white h-170  md:h-130 md:w-2/4 m-1 md:m-3 rounded-lg shadow-lg p-2 md:p-3 overflow-auto"></main>
-    </>
+    </main>
   );
 };
 
