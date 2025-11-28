@@ -44,6 +44,9 @@ const HomePage = () => {
             type="text"
             placeholder="Add a comment..."
             className="w-full md:w-2/3 p-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            onInput={(e) => {
+              e.target.style.width = `${e.target.value.length + 1}ch`;
+            }}
           />
           <button
             type="submit"
