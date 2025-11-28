@@ -41,7 +41,7 @@ const HomePage = () => {
             </button>
           </main>
         </div>
-        <form>
+        <form className="relative">
           <input
             type="text"
             placeholder="Add a comment..."
@@ -49,7 +49,7 @@ const HomePage = () => {
           />
           <button
             type="submit"
-            className="text-orange-500 relative right-10 bottom-5"
+            className="text-orange-500 absolute right-10 bottom-5"
           >
             <FontAwesomeIcon icon={faPaperPlane} />
           </button>
