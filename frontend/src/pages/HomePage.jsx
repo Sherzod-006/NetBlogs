@@ -8,7 +8,7 @@ import {
 const HomePage = () => {
   return (
     <ul className="bg-white dark:bg-gray-700 text-black dark:text-white h-170  md:h-130 md:w-2/3 opacity-70 m-1 md:m-3 rounded-lg shadow-lg p-2 md:p-3 overflow-auto">
-      <li className="border-b-4 border-gray-500 dark:border-gray-300 mb-2 cursor-pointer flex md:flex-row">
+      <li className="border-b-4 border-gray-500 dark:border-gray-300 mb-2 cursor-pointer flex md:flex-row flex-col">
         <main className="flex space-x-2 md:space-x-4 ">
           <img
             src="https://res.cloudinary.com/dzqw71hhs/image/upload/v1764249504/myapp/kidj0nlfkhkj5ugmx1ne.jpg"
