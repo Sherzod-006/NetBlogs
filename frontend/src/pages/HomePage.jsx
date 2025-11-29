@@ -61,15 +61,6 @@ const HomePage = () => {
         </li>
       </ul>
       <FroalaEditorComponent tag="textarea" />
-      <FroalaEditor
-        tag="textarea"
-        config={{
-          placeholderText: "Edit Your Content Here!",
-          charCounterCount: false,
-        }}
-        model={model}
-        // onModelChange={handleModelChange}
-      />
     </main>
   );
 };
