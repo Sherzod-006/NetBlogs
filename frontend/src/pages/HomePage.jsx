@@ -20,12 +20,12 @@ const HomePage = () => {
   const initialConfig = {
     namespace: "NetBlogsEditor",
     theme: {
-      paragraph: "mb-2",
       heading: {
         h1: "text-2xl font-bold",
         h2: "text-xl font-semibold",
-        h3: "text-lg font-semibold",
+        h3: "text-lg font-medium",
       },
+      quote: "border-l-4 pl-3 italic text-gray-600",
     },
     onError(error) {
       console.error(error);
