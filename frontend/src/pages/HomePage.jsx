@@ -9,6 +9,8 @@ import { RichTextPlugin } from "@lexical/react/LexicalRichTextPlugin";
 import { ContentEditable } from "@lexical/react/LexicalContentEditable";
 import { HistoryPlugin } from "@lexical/react/LexicalHistoryPlugin";
 import { AutoFocusPlugin } from "@lexical/react/LexicalAutoFocusPlugin";
+import { useLexicalComposerContext } from "@lexical/react/LexicalComposerContext";
+
 const HomePage = () => {
   const initialConfig = {
     namespace: "NetBlogsEditor",
@@ -16,6 +18,7 @@ const HomePage = () => {
       console.error(error);
     },
   };
+  const [editor] = useLexicalComposerContext();
 
   return (
     <main className="flex">
@@ -81,6 +84,32 @@ const HomePage = () => {
           <HistoryPlugin />
           <AutoFocusPlugin />
         </LexicalComposer>
+        <div className="flex gap-2 border-b p-2 bg-gray-100">
+          <button onClick={() => editor.dispatchCommand("formatBold", true)}>
+            Bold
+          </button>
+          <button onClick={() => editor.dispatchCommand("formatItalic", true)}>
+            Italic
+          </button>
+          <button
+            onClick={() => editor.dispatchCommand("formatUnderline", true)}
+          >
+            Underline
+          </button>
+          <button onClick={() => document.execCommand("insertOrderedList")}>
+            Ordered List
+          </button>
+          <button onClick={() => document.execCommand("insertUnorderedList")}>
+            Bullet List
+          </button>
+          <button
+            onClick={() =>
+              document.execCommand("createLink", "https://example.com")
+            }
+          >
+            Link
+          </button>
+        </div>
       </main>
     </main>
   );
