@@ -4,11 +4,31 @@ import {
   faComment,
   faPaperPlane,
 } from "@fortawesome/free-solid-svg-icons";
-import "froala-editor/css/froala_style.min.css";
-import "froala-editor/css/froala_editor.pkgd.min.css";
-import FroalaEditorComponent from "react-froala-wysiwyg";
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
 
 const HomePage = () => {
+  const modules = {
+    toolbar: [
+      [{ header: [1, 2, 3, false] }],
+      ["bold", "italic", "underline", "strike"],
+      [{ list: "ordered" }, { list: "bullet" }],
+      ["link", "image"],
+      ["clean"],
+    ],
+  };
+
+  const formats = [
+    "header",
+    "bold",
+    "italic",
+    "underline",
+    "strike",
+    "list",
+    "bullet",
+    "link",
+    "image",
+  ];
   return (
     <main className="flex">
       <ul className="bg-white dark:bg-gray-700 text-black dark:text-white h-170  md:h-130 md:w-2/4 m-1 md:m-3 rounded-lg shadow-lg p-2 md:p-3 overflow-auto">
@@ -60,7 +80,7 @@ const HomePage = () => {
           </form>
         </li>
       </ul>
-      <FroalaEditorComponent tag="textarea" />
+      <ReactQuill theme="snow" modules={modules} formats={formats} />
     </main>
   );
 };
