@@ -4,31 +4,37 @@ import {
   faComment,
   faPaperPlane,
 } from "@fortawesome/free-solid-svg-icons";
-// import ReactQuill from "react-quill";
-// import "react-quill/dist/quill.snow.css";
+import { useState } from "react";
+import {
+  LexicalComposer,
+  RichTextPlugin,
+  ContentEditable,
+  HistoryPlugin,
+  AutoFocusPlugin,
+} from "@lexical/react/LexicalComposer";
+import { HeadingNode, QuoteNode } from "@lexical/rich-text";
+import { ListPlugin } from "@lexical/react/LexicalListPlugin";
+import { LinkPlugin } from "@lexical/react/LexicalLinkPlugin";
 
 const HomePage = () => {
-  // const modules = {
-  //   toolbar: [
-  //     [{ header: [1, 2, 3, false] }],
-  //     ["bold", "italic", "underline", "strike"],
-  //     [{ list: "ordered" }, { list: "bullet" }],
-  //     ["link", "image"],
-  //     ["clean"],
-  //   ],
-  // };
+  const [html, setHtml] = useState("");
 
-  // const formats = [
-  //   "header",
-  //   "bold",
-  //   "italic",
-  //   "underline",
-  //   "strike",
-  //   "list",
-  //   "bullet",
-  //   "link",
-  //   "image",
-  // ];
+  const initialConfig = {
+    namespace: "NetBlogsEditor",
+    theme: {
+      paragraph: "mb-2",
+      heading: {
+        h1: "text-2xl font-bold",
+        h2: "text-xl font-semibold",
+        h3: "text-lg font-semibold",
+      },
+    },
+    onError(error) {
+      console.error(error);
+    },
+    nodes: [HeadingNode, QuoteNode],
+  };
+
   return (
     <main className="flex">
       <ul className="bg-white dark:bg-gray-700 text-black dark:text-white h-170  md:h-130 md:w-2/4 m-1 md:m-3 rounded-lg shadow-lg p-2 md:p-3 overflow-auto">
@@ -80,7 +86,27 @@ const HomePage = () => {
           </form>
         </li>
       </ul>
-      {/* <ReactQuill theme="snow" modules={modules} formats={formats} /> */}
+      <main className="bg-white dark:bg-gray-700 text-black dark:text-white rounded-lg shadow-lg p-4">
+        <LexicalComposer initialConfig={initialConfig}>
+          <RichTextPlugin
+            contentEditable={
+              <ContentEditable className="min-h-[200px] p-3 outline-none bg-white dark:bg-gray-800 rounded" />
+            }
+            placeholder={
+              <div className="p-3 text-gray-400">Blog yozuvini kiriting...</div>
+            }
+          />
+          <HistoryPlugin />
+          <AutoFocusPlugin />
+          <ListPlugin />
+          <LinkPlugin />
+        </LexicalComposer>
+
+        <div className="mt-6 p-4 border rounded bg-white shadow">
+          <h2 className="text-lg font-semibold mb-2">Preview:</h2>
+          <div dangerouslySetInnerHTML={{ __html: html }} />
+        </div>
+      </main>
     </main>
   );
 };
