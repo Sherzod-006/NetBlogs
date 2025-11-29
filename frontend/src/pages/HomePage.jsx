@@ -4,35 +4,17 @@ import {
   faComment,
   faPaperPlane,
 } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
-import {
-  LexicalComposer,
-  RichTextPlugin,
-  ContentEditable,
-  HistoryPlugin,
-  AutoFocusPlugin,
-} from "@lexical/react/LexicalComposer";
-import { HeadingNode, QuoteNode } from "@lexical/rich-text";
-import { ListPlugin } from "@lexical/react/LexicalListPlugin";
-import { LinkPlugin } from "@lexical/react/LexicalLinkPlugin";
-
+import { LexicalComposer } from "@lexical/react/LexicalComposer";
+import { RichTextPlugin } from "@lexical/react/LexicalRichTextPlugin";
+import { ContentEditable } from "@lexical/react/LexicalContentEditable";
+import { HistoryPlugin } from "@lexical/react/LexicalHistoryPlugin";
+import { AutoFocusPlugin } from "@lexical/react/LexicalAutoFocusPlugin";
 const HomePage = () => {
-  const [html, setHtml] = useState("");
-
   const initialConfig = {
     namespace: "NetBlogsEditor",
-    theme: {
-      paragraph: "mb-2",
-      heading: {
-        h1: "text-2xl font-bold",
-        h2: "text-xl font-semibold",
-        h3: "text-lg font-semibold",
-      },
-    },
     onError(error) {
       console.error(error);
     },
-    nodes: [HeadingNode, QuoteNode],
   };
 
   return (
@@ -98,14 +80,7 @@ const HomePage = () => {
           />
           <HistoryPlugin />
           <AutoFocusPlugin />
-          <ListPlugin />
-          <LinkPlugin />
         </LexicalComposer>
-
-        <div className="mt-6 p-4 border rounded bg-white shadow">
-          <h2 className="text-lg font-semibold mb-2">Preview:</h2>
-          <div dangerouslySetInnerHTML={{ __html: html }} />
-        </div>
       </main>
     </main>
   );
