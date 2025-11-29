@@ -10,12 +10,11 @@ import { RichTextPlugin } from "@lexical/react/LexicalRichTextPlugin";
 import { ContentEditable } from "@lexical/react/LexicalContentEditable";
 import { HistoryPlugin } from "@lexical/react/LexicalHistoryPlugin";
 import { AutoFocusPlugin } from "@lexical/react/LexicalAutoFocusPlugin";
-import { LinkPlugin } from "@lexical/react/LexicalLinkPlugin";
-import { ListPlugin } from "@lexical/react/LexicalListPlugin";
 import { HeadingNode, QuoteNode } from "@lexical/rich-text";
 import { ListNode, ListItemNode } from "@lexical/list";
-import { CodeNode } from "@lexical/code";
 import { LinkNode } from "@lexical/link";
+import { CodeNode } from "@lexical/code";
+import Toolbar from "./Toolbar";
 
 const HomePage = () => {
   const [html, setHtml] = useState("");
@@ -89,6 +88,7 @@ const HomePage = () => {
       </ul>
       <main className="bg-white dark:bg-gray-700 text-black dark:text-white rounded-lg shadow-lg p-4">
         <LexicalComposer initialConfig={initialConfig}>
+          <Toolbar />
           <RichTextPlugin
             contentEditable={
               <ContentEditable className="min-h-[200px] p-3 outline-none bg-white dark:bg-gray-800 rounded" />
@@ -99,8 +99,6 @@ const HomePage = () => {
           />
           <HistoryPlugin />
           <AutoFocusPlugin />
-          <ListPlugin />
-          <LinkPlugin />
         </LexicalComposer>
 
         <div className="mt-6 p-4 border rounded bg-white shadow">
