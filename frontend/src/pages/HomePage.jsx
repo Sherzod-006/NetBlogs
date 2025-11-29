@@ -4,21 +4,34 @@ import {
   faComment,
   faPaperPlane,
 } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
 import { LexicalComposer } from "@lexical/react/LexicalComposer";
 import { RichTextPlugin } from "@lexical/react/LexicalRichTextPlugin";
 import { ContentEditable } from "@lexical/react/LexicalContentEditable";
 import { HistoryPlugin } from "@lexical/react/LexicalHistoryPlugin";
 import { AutoFocusPlugin } from "@lexical/react/LexicalAutoFocusPlugin";
-import { useLexicalComposerContext } from "@lexical/react/LexicalComposerContext";
+import { HeadingNode, QuoteNode } from "@lexical/rich-text";
+import { ListPlugin } from "@lexical/react/LexicalListPlugin";
+import { LinkPlugin } from "@lexical/react/LexicalLinkPlugin";
 
 const HomePage = () => {
+  const [html, setHtml] = useState("");
+
   const initialConfig = {
     namespace: "NetBlogsEditor",
+    theme: {
+      paragraph: "mb-2",
+      heading: {
+        h1: "text-2xl font-bold",
+        h2: "text-xl font-semibold",
+        h3: "text-lg font-semibold",
+      },
+    },
     onError(error) {
       console.error(error);
     },
+    nodes: [HeadingNode, QuoteNode],
   };
-  const [editor] = useLexicalComposerContext();
 
   return (
     <main className="flex">
@@ -83,32 +96,13 @@ const HomePage = () => {
           />
           <HistoryPlugin />
           <AutoFocusPlugin />
+          <ListPlugin />
+          <LinkPlugin />
         </LexicalComposer>
-        <div className="flex gap-2 border-b p-2 bg-gray-100">
-          <button onClick={() => editor.dispatchCommand("formatBold", true)}>
-            Bold
-          </button>
-          <button onClick={() => editor.dispatchCommand("formatItalic", true)}>
-            Italic
-          </button>
-          <button
-            onClick={() => editor.dispatchCommand("formatUnderline", true)}
-          >
-            Underline
-          </button>
-          <button onClick={() => document.execCommand("insertOrderedList")}>
-            Ordered List
-          </button>
-          <button onClick={() => document.execCommand("insertUnorderedList")}>
-            Bullet List
-          </button>
-          <button
-            onClick={() =>
-              document.execCommand("createLink", "https://example.com")
-            }
-          >
-            Link
-          </button>
+
+        <div className="mt-6 p-4 border rounded bg-white shadow">
+          <h2 className="text-lg font-semibold mb-2">Preview:</h2>
+          <div dangerouslySetInnerHTML={{ __html: html }} />
         </div>
       </main>
     </main>
