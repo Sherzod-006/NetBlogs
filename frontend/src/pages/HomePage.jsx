@@ -4,7 +4,7 @@ import {
   faComment,
   faPaperPlane,
 } from "@fortawesome/free-solid-svg-icons";
-
+import FroalaEditorComponent from "react-froala-wysiwyg";
 const HomePage = () => {
   return (
     <main className="flex">
@@ -57,6 +57,7 @@ const HomePage = () => {
           </form>
         </li>
       </ul>
+      <FroalaEditorComponent tag="textarea" />
     </main>
   );
 };
