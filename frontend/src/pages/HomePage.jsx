@@ -4,37 +4,8 @@ import {
   faComment,
   faPaperPlane,
 } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
-import { LexicalComposer } from "@lexical/react/LexicalComposer";
-import { RichTextPlugin } from "@lexical/react/LexicalRichTextPlugin";
-import { ContentEditable } from "@lexical/react/LexicalContentEditable";
-import { HistoryPlugin } from "@lexical/react/LexicalHistoryPlugin";
-import { AutoFocusPlugin } from "@lexical/react/LexicalAutoFocusPlugin";
-import { HeadingNode, QuoteNode } from "@lexical/rich-text";
-import { ListNode, ListItemNode } from "@lexical/list";
-import { LinkNode } from "@lexical/link";
-import { CodeNode } from "@lexical/code";
-import Toolbar from "./Toolbar";
 
 const HomePage = () => {
-  const [html, setHtml] = useState("");
-
-  const initialConfig = {
-    namespace: "NetBlogsEditor",
-    theme: {
-      heading: {
-        h1: "text-2xl font-bold",
-        h2: "text-xl font-semibold",
-        h3: "text-lg font-medium",
-      },
-      quote: "border-l-4 pl-3 italic text-gray-600",
-    },
-    onError(error) {
-      console.error(error);
-    },
-    nodes: [HeadingNode, QuoteNode, ListNode, ListItemNode, CodeNode, LinkNode],
-  };
-
   return (
     <main className="flex">
       <ul className="bg-white dark:bg-gray-700 text-black dark:text-white h-170  md:h-130 md:w-2/4 m-1 md:m-3 rounded-lg shadow-lg p-2 md:p-3 overflow-auto">
@@ -86,26 +57,7 @@ const HomePage = () => {
           </form>
         </li>
       </ul>
-      <main className="bg-white dark:bg-gray-700 text-black dark:text-white rounded-lg shadow-lg p-4">
-        <LexicalComposer initialConfig={initialConfig}>
-          <Toolbar />
-          <RichTextPlugin
-            contentEditable={
-              <ContentEditable className="min-h-[200px] p-3 outline-none bg-white dark:bg-gray-800 rounded" />
-            }
-            placeholder={
-              <div className="p-3 text-gray-400">Blog yozuvini kiriting...</div>
-            }
-          />
-          <HistoryPlugin />
-          <AutoFocusPlugin />
-        </LexicalComposer>
-
-        <div className="mt-6 p-4 border rounded bg-white shadow">
-          <h2 className="text-lg font-semibold mb-2">Preview:</h2>
-          <div dangerouslySetInnerHTML={{ __html: html }} />
-        </div>
-      </main>
+      <main className="bg-white dark:bg-gray-700 text-black dark:text-white rounded-lg shadow-lg p-4"></main>
     </main>
   );
 };
