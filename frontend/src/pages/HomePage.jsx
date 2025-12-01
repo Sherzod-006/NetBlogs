@@ -10,6 +10,7 @@ import Editor from "../components/Editor";
 const HomePage = () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
+  const [image, setImage] = useState(null);
   const publish = () => {
     console.log("TITLE:", title);
     console.log("CONTENT:", content);
@@ -68,18 +69,25 @@ const HomePage = () => {
       </ul>
       <main className="bg-white dark:bg-gray-700 text-black dark:text-white h-170  md:h-130 md:w-2/4 m-1 md:m-3 rounded-lg shadow-lg p-2 md:p-3 overflow-auto">
         <input
-          className="border p-3 w-full rounded mb-4 outline-none bg-gray-600"
+          className="border p-3 w-full rounded mb-4 outline-none bg-gray-600 text-white"
           placeholder="Post title..."
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
         <Editor value={content} onChange={setContent} />
-        <button
-          onClick={publish}
-          className="bg-orange-500 text-white px-3 py-1 rounded hover:bg-orange-600 cursor-pointer shadow-lg mt-4"
-        >
-          Post
-        </button>
+        <div className="mt-4">
+          <button
+            onClick={publish}
+            className="bg-orange-500 text-white px-3 py-1 rounded hover:bg-orange-600 cursor-pointer shadow-lg"
+          >
+            Post
+          </button>
+          <input
+            type="file"
+            placeholder="Upload Image"
+            className="bg-orange-500 text-white px-3 py-1 rounded hover:bg-orange-600 cursor-pointer shadow-lg"
+          />
+        </div>
       </main>
     </main>
   );
