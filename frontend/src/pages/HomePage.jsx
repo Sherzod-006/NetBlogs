@@ -69,7 +69,7 @@ const HomePage = () => {
             <FontAwesomeIcon icon={faMagnifyingGlass} />
           </button>
         </div>
-        <ul className="overflow-auto space-y-3 py-4 mt-2 flex flex-col items-end">
+        <ul className="overflow-auto space-y-5 py-4 mt-2 flex flex-col items-end">
           <li className="h-10 flex bg-gray-200 dark:bg-gray-600 rounded-lg justify-between items-center w-13/14 p-1">
             <img
               src="https://res.cloudinary.com/dzqw71hhs/image/upload/v1764249504/myapp/kidj0nlfkhkj5ugmx1ne.jpg"
