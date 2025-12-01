@@ -87,7 +87,10 @@ const HomePage = () => {
               className="h-14 w-14 rounded-full relative right-7 z-50"
             />
             <h1 className="font-bold text-lg ml-2">Lion</h1>
-            <a href="http://gmail.com" className="text-gray-400">
+            <a
+              href="http://gmail.com"
+              className="text-gray-400 hover:underline hover:text-orange-500"
+            >
               sherzodsobirovv1@gmail.com
             </a>
             <button className="bg-orange-500 text-white px-3 py-1 rounded hover:bg-orange-600 cursor-pointer shadow-lg font-medium">
