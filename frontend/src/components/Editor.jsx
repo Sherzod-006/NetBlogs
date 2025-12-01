@@ -1,6 +1,6 @@
 import ReactQuill from "react-quill-new";
 import "react-quill-new/dist/quill.snow.css";
-import "./Editor.css";
+import "../editor.css";
 
 export default function Editor({ value, onChange }) {
   const modules = {
