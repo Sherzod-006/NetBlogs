@@ -19,7 +19,6 @@ export default function Editor({ value, onChange }) {
       onChange={onChange}
       plugins={[
         listsPlugin(),
-        CreateLink(),
         toolbarPlugin({
           toolbarContents: () => (
             <>
