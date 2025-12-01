@@ -71,8 +71,11 @@ const HomePage = () => {
           </button>
         </div>
         <ul className="overflow-auto space-y-6 py-4 mt-2 flex flex-col items-end">
-          <li className="h-10 flex bg-gray-200 dark:bg-gray-600 rounded-lg justify-between items-center w-13/14 p-1">
-            <Link to="/profile/user123" className="">
+          <li className="h-10  bg-gray-200 dark:bg-gray-600 rounded-lg  w-13/14 p-1">
+            <Link
+              to="/profile/user123"
+              className="flex justify-between items-center w-full"
+            >
               <img
                 src="https://res.cloudinary.com/dzqw71hhs/image/upload/v1764249504/myapp/kidj0nlfkhkj5ugmx1ne.jpg"
                 className="h-14 w-14 rounded-full relative right-7 z-50"
