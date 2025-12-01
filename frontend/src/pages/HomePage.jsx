@@ -21,6 +21,10 @@ const HomePage = () => {
                 <p className="text-lg">
                   Your go-to platform for insightful blogs and articles.
                 </p>
+                <img
+                  src="https://res.cloudinary.com/dzqw71hhs/image/upload/v1763387692/main-sample.png"
+                  className="w-auto max-h-60 md:max-h-70 rounded-lg object-cover"
+                />
               </section>
             </main>
             <main className="flex flex-row md:flex-col mx-auto md:items-start my-2 md:my-auto space-x-6 md:space-y-6 text-md md:text-xl">
