@@ -65,7 +65,7 @@ const HomePage = () => {
             className="bg-gray-400 px-4 py-1 outline-none border-none rounded-2xl text-black"
             placeholder="Searching users..."
           />
-          <button className="py-1 px-2 bg-orange-500 rounded-2xl">
+          <button className="py-1 px-2 bg-orange-500 rounded-2xl text-white">
             <FontAwesomeIcon icon={faMagnifyingGlass} />
           </button>
         </div>
@@ -84,10 +84,12 @@ const HomePage = () => {
           <li className="h-10 flex bg-gray-200 dark:bg-gray-600 rounded-lg justify-between items-center w-13/14 p-1">
             <img
               src="https://res.cloudinary.com/dzqw71hhs/image/upload/v1764249504/myapp/kidj0nlfkhkj5ugmx1ne.jpg"
-              className="h-14 w-14 rounded-full relative right-7"
+              className="h-14 w-14 rounded-full relative right-7 z-50"
             />
-            <h1 className="font-medium text-lg ml-2">Lion</h1>
-            <p>sherzodsobirovv1@gmail.com</p>
+            <h1 className="font-bold text-lg ml-2">Lion</h1>
+            <a href="http://gmail.com" className="text-gray-400">
+              sherzodsobirovv1@gmail.com
+            </a>
             <button className="bg-orange-500 text-white px-3 py-1 rounded hover:bg-orange-600 cursor-pointer shadow-lg font-medium">
               Follow
             </button>
