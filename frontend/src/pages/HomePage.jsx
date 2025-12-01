@@ -76,16 +76,19 @@ const HomePage = () => {
         />
         <Editor value={content} onChange={setContent} />
         <div className="mt-4 space-x-3">
+          <input
+            type="file"
+            className="bg-orange-500 text-white px-2 py-1 rounded hover:bg-orange-600 cursor-pointer shadow-lg"
+          />
           <button
             onClick={publish}
             className="bg-orange-500 text-white px-3 py-1 rounded hover:bg-orange-600 cursor-pointer shadow-lg"
           >
             Post
           </button>
-          <input
-            type="file"
-            className="bg-orange-500 text-white  py-1 rounded hover:bg-orange-600 cursor-pointer shadow-lg"
-          />
+          <button className="bg-orange-500 text-white px-3 py-1 rounded hover:bg-orange-600 cursor-pointer shadow-lg">
+            Cancel
+          </button>
         </div>
       </main>
     </main>
