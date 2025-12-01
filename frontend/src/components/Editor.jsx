@@ -20,7 +20,7 @@ export default function Editor({ value, onChange }) {
     "list",
     "bullet",
     "link",
-    "image",
+    "clean",
   ];
   return (
     <ReactQuill
