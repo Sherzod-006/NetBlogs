@@ -68,7 +68,7 @@ const HomePage = () => {
       </ul>
       <main className="bg-white dark:bg-gray-700 text-black dark:text-white h-170  md:h-130 md:w-2/4 m-1 md:m-3 rounded-lg shadow-lg p-2 md:p-3 overflow-auto">
         <input
-          className="border p-3 w-full rounded mb-4"
+          className="border p-3 w-full rounded mb-4 outline-none bg-gray-600"
           placeholder="Post title..."
           value={title}
           onChange={(e) => setTitle(e.target.value)}
