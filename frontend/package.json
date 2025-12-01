@@ -18,6 +18,8 @@
     "@lexical/list": "^0.38.2",
     "@lexical/react": "^0.38.2",
     "@tailwindcss/vite": "^4.1.16",
+    "@tiptap/react": "^3.11.1",
+    "@tiptap/starter-kit": "^3.11.1",
     "axios": "^1.13.0",
     "dotenv": "^17.2.3",
     "jwt-decode": "^4.0.0",
