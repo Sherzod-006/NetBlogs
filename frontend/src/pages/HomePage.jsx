@@ -74,6 +74,12 @@ const HomePage = () => {
           onChange={(e) => setTitle(e.target.value)}
         />
         <Editor value={content} onChange={setContent} />
+        <button
+          onClick={publish}
+          className="bg-orange-500 text-white px-3 py-1 rounded hover:bg-orange-600 cursor-pointer shadow-lg mt-4"
+        >
+          Post
+        </button>
       </main>
     </main>
   );
