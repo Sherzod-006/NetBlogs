@@ -58,7 +58,7 @@ const HomePage = () => {
           </form>
         </li>
       </ul>
-      <ul className="bg-white dark:bg-gray-700 text-black dark:text-white h-170  md:h-130 md:w-2/4 m-1 md:m-3 rounded-lg shadow-lg p-2 md:p-3 overflow-auto space-y-3">
+      <ul className="flex flex-row justify-end bg-white dark:bg-gray-700 text-black dark:text-white h-170  md:h-130 md:w-2/4 m-1 md:m-3 rounded-lg shadow-lg p-2 md:p-3 overflow-auto space-y-3">
         <div className="flex space-x-2">
           <input
             type="text"
