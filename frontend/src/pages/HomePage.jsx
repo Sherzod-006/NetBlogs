@@ -70,10 +70,10 @@ const HomePage = () => {
           </button>
         </div>
         <ul className="overflow-auto space-y-3 py-4 mt-2 flex flex-col items-end">
-          <li className="h-10 flex bg-gray-200 dark:bg-gray-600 rounded-lg justify-between items-center w-11/12 p-1">
+          <li className="h-10 flex bg-gray-200 dark:bg-gray-600 rounded-lg justify-between items-center w-13/14 p-1">
             <img
               src="https://res.cloudinary.com/dzqw71hhs/image/upload/v1764249504/myapp/kidj0nlfkhkj5ugmx1ne.jpg"
-              className="h-13 w-13 rounded-full relative left-2"
+              className="h-14 w-14 rounded-full relative left-5"
             />
             <h1 className="font-medium text-lg ml-2">Lion</h1>
             <p>sherzodsobirovv1@gmail.com</p>
