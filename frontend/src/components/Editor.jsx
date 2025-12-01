@@ -23,13 +23,15 @@ export default function Editor({ value, onChange }) {
     "clean",
   ];
   return (
-    <ReactQuill
-      theme="snow"
-      value={value}
-      onChange={onChange}
-      modules={modules}
-      formats={formats}
-      className="h-64"
-    />
+    <div className="bg-gray-900 p-2 rounded-xl border border-gray-700">
+      <ReactQuill
+        theme="snow"
+        value={value}
+        onChange={onChange}
+        modules={modules}
+        formats={formats}
+        className="custom-editor"
+      />
+    </div>
   );
 }

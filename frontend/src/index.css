@@ -1,1 +1,20 @@
 @import "tailwindcss";
+
+@import "react-quill/dist/quill.snow.css";
+
+/* Editor height */
+.ql-editor {
+  min-height: 300px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Toolbar background */
+.ql-toolbar {
+  @apply bg-gray-100 border border-gray-300 rounded-t-lg;
+}
+
+/* Editor body */
+.ql-container {
+  @apply border border-gray-300 rounded-b-lg;
+}
