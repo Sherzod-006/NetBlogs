@@ -65,7 +65,7 @@ const HomePage = () => {
             className="bg-gray-400 px-4 py-1 outline-none border-none rounded-2xl text-black"
             placeholder="Searching users..."
           />
-          <button className="p-2 bg-orange-500 rounded-3xl">
+          <button className="p-1 bg-orange-500 rounded-2xl">
             <FontAwesomeIcon icon={faMagnifyingGlass} />
           </button>
         </div>
