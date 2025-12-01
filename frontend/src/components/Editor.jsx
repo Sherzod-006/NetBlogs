@@ -1,5 +1,6 @@
 import ReactQuill from "react-quill-new";
 import "react-quill-new/dist/quill.snow.css";
+import "react-quill-new/dist/quill.bubble.css";
 
 export default function Editor({ value, onChange }) {
   const modules = {
@@ -24,7 +25,7 @@ export default function Editor({ value, onChange }) {
   ];
   return (
     <ReactQuill
-      theme="snow"
+      theme="bubble"
       value={value}
       onChange={onChange}
       modules={modules}

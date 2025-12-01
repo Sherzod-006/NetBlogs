@@ -73,15 +73,7 @@ const HomePage = () => {
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
-
         <Editor value={content} onChange={setContent} />
-
-        <button
-          className="mt-4 bg-blue-600 text-white px-4 py-2 rounded"
-          onClick={publish}
-        >
-          Publish
-        </button>
       </main>
     </main>
   );
