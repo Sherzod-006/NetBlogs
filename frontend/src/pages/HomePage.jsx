@@ -5,6 +5,7 @@ import {
   faPaperPlane,
   faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   return (
@@ -70,21 +71,23 @@ const HomePage = () => {
           </button>
         </div>
         <ul className="overflow-auto space-y-6 py-4 mt-2 flex flex-col items-end">
-          <li className="h-10 flex bg-gray-200 dark:bg-gray-600 rounded-lg justify-between items-center w-13/14 p-1">
-            <img
-              src="https://res.cloudinary.com/dzqw71hhs/image/upload/v1764249504/myapp/kidj0nlfkhkj5ugmx1ne.jpg"
-              className="h-14 w-14 rounded-full relative right-7 z-50"
-            />
-            <h1 className="font-bold text-lg ml-2">Lion</h1>
-            <a
-              href="http://gmail.com"
-              className="text-gray-400 hover:underline hover:text-orange-500"
-            >
-              sherzodsobirovv1@gmail.com
-            </a>
-            <button className="bg-orange-500 text-white px-3 py-1 rounded hover:bg-orange-600 cursor-pointer shadow-lg font-medium">
-              Follow
-            </button>
+          <li className="h-10  bg-gray-200 dark:bg-gray-600 rounded-lg  w-13/14 p-1">
+            <Link to="/profile" className="flex justify-between  items-center">
+              <img
+                src="https://res.cloudinary.com/dzqw71hhs/image/upload/v1764249504/myapp/kidj0nlfkhkj5ugmx1ne.jpg"
+                className="h-14 w-14 rounded-full relative right-7 z-50"
+              />
+              <h1 className="font-bold text-lg ml-2">Lion</h1>
+              <a
+                href="http://gmail.com"
+                className="text-gray-400 hover:underline hover:text-orange-500"
+              >
+                sherzodsobirovv1@gmail.com
+              </a>
+              <button className="bg-orange-500 text-white px-3 py-1 rounded hover:bg-orange-600 cursor-pointer shadow-lg font-medium">
+                Follow
+              </button>
+            </Link>
           </li>
         </ul>
       </main>
