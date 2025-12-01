@@ -4,8 +4,18 @@ import {
   faComment,
   faPaperPlane,
 } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
+import Editor from "../components/Editor";
 
 const HomePage = () => {
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
+
+  // const submitPost = () => {
+  //   console.log("TITLE:", title);
+  //   console.log("CONTENT:", content);
+  // };
+
   return (
     <main className="flex">
       <ul className="bg-white dark:bg-gray-700 text-black dark:text-white h-170  md:h-130 md:w-2/4 m-1 md:m-3 rounded-lg shadow-lg p-2 md:p-3 overflow-auto">
@@ -57,7 +67,20 @@ const HomePage = () => {
           </form>
         </li>
       </ul>
-      <main className="bg-white dark:bg-gray-700 text-black dark:text-white h-170  md:h-130 md:w-2/4 m-1 md:m-3 rounded-lg shadow-lg p-2 md:p-3 overflow-auto"></main>
+      <main className="bg-white dark:bg-gray-700 text-black dark:text-white h-170  md:h-130 md:w-2/4 m-1 md:m-3 rounded-lg shadow-lg p-2 md:p-3 overflow-auto">
+        <input
+          className="w-full p-3 border rounded mb-4"
+          placeholder="Post title..."
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+        />
+
+        <Editor value={content} onChange={setContent} />
+
+        <button className="bg-blue-500 text-white px-4 py-2 rounded mt-4">
+          Publish
+        </button>
+      </main>
     </main>
   );
 };
