@@ -1,6 +1,6 @@
 import ReactQuill from "react-quill-new";
 import "react-quill-new/dist/quill.snow.css";
-import "react-quill-new/dist/quill.bubble.css";
+import "./Editor.css";
 
 export default function Editor({ value, onChange }) {
   const modules = {
@@ -26,7 +26,7 @@ export default function Editor({ value, onChange }) {
   return (
     <div className="bg-gray-900 p-2 rounded-xl border border-gray-700">
       <ReactQuill
-        theme="bubble"
+        theme="snow"
         value={value}
         onChange={onChange}
         modules={modules}

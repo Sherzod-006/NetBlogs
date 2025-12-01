@@ -1,0 +1,23 @@
+.ql-toolbar {
+  background: #1f2937; /* dark */
+  border-radius: 8px 8px 0 0;
+  border: none;
+}
+
+.ql-toolbar button svg {
+  color: white;
+}
+
+.ql-container {
+  border: none !important;
+  background: #111827; /* editor area */
+  color: #fff;
+  padding: 20px;
+  border-radius: 0 0 8px 8px;
+}
+
+.ql-editor {
+  min-height: 200px;
+  font-size: 16px;
+  line-height: 1.6;
+}
