@@ -69,14 +69,16 @@ const HomePage = () => {
             <FontAwesomeIcon icon={faMagnifyingGlass} />
           </button>
         </div>
-        <li className="flex bg-gray-200 dark:bg-gray-600 rounded-lg justify-center items-center">
-          <h1>hello</h1>
-        </li>
-        <li className="flex bg-gray-200 dark:bg-gray-600 rounded-lg justify-center items-center">
-          <h1>hello</h1>
-        </li>
-        <li className="flex bg-gray-200 dark:bg-gray-600 rounded-lg justify-center items-center">
-          <h1>hello</h1>
+        <li className="flex bg-gray-200 dark:bg-gray-600 rounded-lg justify-between items-center">
+          <img
+            src="https://res.cloudinary.com/dzqw71hhs/image/upload/v1764249504/myapp/kidj0nlfkhkj5ugmx1ne.jpg"
+            className="h-11 w-11 rounded-full"
+          />
+          <h1 className="font-medium text-lg ml-2">Lion</h1>
+          <p>sherzodsobirovv1@gmail.com</p>
+          <button className="bg-orange-500 text-white px-3 py-1 rounded hover:bg-orange-600 cursor-pointer shadow-lg font-medium">
+            Follow
+          </button>
         </li>
       </ul>
     </main>
