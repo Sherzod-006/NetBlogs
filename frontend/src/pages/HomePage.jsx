@@ -58,7 +58,7 @@ const HomePage = () => {
           </form>
         </li>
       </ul>
-      <ul className="flex flex-row justify-end bg-white dark:bg-gray-700 text-black dark:text-white h-170  md:h-130 md:w-2/4 m-1 md:m-3 rounded-lg shadow-lg p-2 md:p-3 overflow-auto space-y-3">
+      <main className="bg-white dark:bg-gray-700 text-black dark:text-white h-170  md:h-130 md:w-2/4 m-1 md:m-3 rounded-lg shadow-lg p-2 md:p-3">
         <div className="flex space-x-2">
           <input
             type="text"
@@ -69,18 +69,20 @@ const HomePage = () => {
             <FontAwesomeIcon icon={faMagnifyingGlass} />
           </button>
         </div>
-        <li className="h-10 flex bg-gray-200 dark:bg-gray-600 rounded-lg justify-between items-center w-11/12 p-1">
-          <img
-            src="https://res.cloudinary.com/dzqw71hhs/image/upload/v1764249504/myapp/kidj0nlfkhkj5ugmx1ne.jpg"
-            className="h-13 w-13 rounded-full relative left-2"
-          />
-          <h1 className="font-medium text-lg ml-2">Lion</h1>
-          <p>sherzodsobirovv1@gmail.com</p>
-          <button className="bg-orange-500 text-white px-3 py-1 rounded hover:bg-orange-600 cursor-pointer shadow-lg font-medium">
-            Follow
-          </button>
-        </li>
-      </ul>
+        <ul className="overflow-auto space-y-3">
+          <li className="h-10 flex bg-gray-200 dark:bg-gray-600 rounded-lg justify-between items-center w-11/12 p-1">
+            <img
+              src="https://res.cloudinary.com/dzqw71hhs/image/upload/v1764249504/myapp/kidj0nlfkhkj5ugmx1ne.jpg"
+              className="h-13 w-13 rounded-full relative left-2"
+            />
+            <h1 className="font-medium text-lg ml-2">Lion</h1>
+            <p>sherzodsobirovv1@gmail.com</p>
+            <button className="bg-orange-500 text-white px-3 py-1 rounded hover:bg-orange-600 cursor-pointer shadow-lg font-medium">
+              Follow
+            </button>
+          </li>
+        </ul>
+      </main>
     </main>
   );
 };
