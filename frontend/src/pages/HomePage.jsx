@@ -8,7 +8,7 @@ import {
 const HomePage = () => {
   return (
     <main className="flex flex-col md:flex-row">
-      <ul className="bg-white dark:bg-gray-700 text-black dark:text-white h-170  md:h-130 md:w-5/8 m-1 md:m-3 rounded-lg shadow-lg p-2 md:p-3 overflow-auto">
+      <ul className="bg-white dark:bg-gray-700 text-black dark:text-white h-170  md:h-130 md:w-2/4 m-1 md:m-3 rounded-lg shadow-lg p-2 md:p-3 overflow-auto">
         <li className="border-b-4 border-gray-500 dark:border-gray-300 mb-2 cursor-pointer flex flex-col space-y-2">
           <div className="flex md:flex-row flex-col">
             <main className="flex space-x-2 md:space-x-4 ">
@@ -21,10 +21,6 @@ const HomePage = () => {
                 <p className="text-lg">
                   Your go-to platform for insightful blogs and articles.
                 </p>
-                <img
-                  src="https://res.cloudinary.com/dzqw71hhs/image/upload/v1763387692/main-sample.png"
-                  className="w-auto max-h-60 md:max-h-70 rounded-lg object-cover"
-                />
               </section>
             </main>
             <main className="flex flex-row md:flex-col mx-auto md:items-start my-2 md:my-auto space-x-6 md:space-y-6 text-md md:text-xl">
@@ -57,7 +53,7 @@ const HomePage = () => {
           </form>
         </li>
       </ul>
-      <main className="bg-white dark:bg-gray-700 text-black dark:text-white h-170  md:h-130 md:w-3/8 m-1 md:m-3 rounded-lg shadow-lg p-2 md:p-3 overflow-auto"></main>
+      <main className="bg-white dark:bg-gray-700 text-black dark:text-white h-170  md:h-130 md:w-2/4 m-1 md:m-3 rounded-lg shadow-lg p-2 md:p-3 overflow-auto"></main>
     </main>
   );
 };
