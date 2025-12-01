@@ -1,41 +1,13 @@
-import {
-  MDXEditor,
-  toolbarPlugin,
-  UndoRedo,
-  BoldItalicUnderlineToggles,
-  BlockTypeSelect,
-  ListsToggle,
-  Separator,
-  CreateLink,
-  listsPlugin,
-} from "@mdxeditor/editor";
-
-import "@mdxeditor/editor/style.css";
+import ReactQuill from "react-quill-new";
+import "react-quill-new/dist/quill.snow.css";
 
 export default function Editor({ value, onChange }) {
   return (
-    <MDXEditor
-      markdown={value}
+    <ReactQuill
+      theme="snow"
+      value={value}
       onChange={onChange}
-      plugins={[
-        listsPlugin(),
-        toolbarPlugin({
-          toolbarContents: () => (
-            <>
-              <UndoRedo />
-              <Separator />
-              <BoldItalicUnderlineToggles />
-              <Separator />
-              <BlockTypeSelect />
-              <Separator />
-              <ListsToggle /> {/* Toolbar tugmalari */}
-              <Separator />
-              <CreateLink />
-            </>
-          ),
-        }),
-      ]}
-      className="border rounded-lg p-3 min-h-[200px]"
+      className="h-64"
     />
   );
 }

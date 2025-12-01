@@ -10,11 +10,10 @@ import Editor from "../components/Editor";
 const HomePage = () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
-
-  // const submitPost = () => {
-  //   console.log("TITLE:", title);
-  //   console.log("CONTENT:", content);
-  // };
+  const publish = () => {
+    console.log("TITLE:", title);
+    console.log("CONTENT:", content);
+  };
 
   return (
     <main className="flex">
@@ -69,7 +68,7 @@ const HomePage = () => {
       </ul>
       <main className="bg-white dark:bg-gray-700 text-black dark:text-white h-170  md:h-130 md:w-2/4 m-1 md:m-3 rounded-lg shadow-lg p-2 md:p-3 overflow-auto">
         <input
-          className="w-full p-3 border rounded mb-4"
+          className="border p-3 w-full rounded mb-4"
           placeholder="Post title..."
           value={title}
           onChange={(e) => setTitle(e.target.value)}
@@ -77,7 +76,10 @@ const HomePage = () => {
 
         <Editor value={content} onChange={setContent} />
 
-        <button className="bg-blue-500 text-white px-4 py-2 rounded mt-4">
+        <button
+          className="mt-4 bg-blue-600 text-white px-4 py-2 rounded"
+          onClick={publish}
+        >
           Publish
         </button>
       </main>
