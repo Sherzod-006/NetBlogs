@@ -58,6 +58,11 @@ const HomePage = () => {
         </li>
       </ul>
       <ul className="bg-white dark:bg-gray-700 text-black dark:text-white h-170  md:h-130 md:w-2/4 m-1 md:m-3 rounded-lg shadow-lg p-2 md:p-3 overflow-auto space-y-3">
+        <input
+          type="text"
+          className="bg-gray-400 px-4 py-1 outline-none border-none rounded-2xl"
+          placeholder="Searching users..."
+        />
         <li className="flex bg-gray-200 dark:bg-gray-600 rounded-lg justify-center items-center">
           <h1>hello</h1>
         </li>
