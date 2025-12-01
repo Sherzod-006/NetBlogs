@@ -18,7 +18,8 @@ export default function Editor({ value, onChange }) {
       markdown={value}
       onChange={onChange}
       plugins={[
-        listsPlugin(), // <-- MUHIM!! Bu bo‘lmasa listlar ishlamaydi
+        listsPlugin(),
+        CreateLink(),
         toolbarPlugin({
           toolbarContents: () => (
             <>
