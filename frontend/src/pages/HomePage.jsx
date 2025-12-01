@@ -69,7 +69,7 @@ const HomePage = () => {
             <FontAwesomeIcon icon={faMagnifyingGlass} />
           </button>
         </div>
-        <li className="h-10 flex bg-gray-200 dark:bg-gray-600 rounded-lg justify-between items-center">
+        <li className="h-10 flex bg-gray-200 dark:bg-gray-600 rounded-lg justify-between items-center w-11/12 p-1">
           <img
             src="https://res.cloudinary.com/dzqw71hhs/image/upload/v1764249504/myapp/kidj0nlfkhkj5ugmx1ne.jpg"
             className="h-13 w-13 rounded-full relative left-2"
