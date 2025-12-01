@@ -71,7 +71,7 @@ const HomePage = () => {
           </button>
         </div>
         <ul className="overflow-auto space-y-6 py-4 mt-2 flex flex-col items-end">
-          <li className="h-10  bg-gray-200 dark:bg-gray-600 rounded-lg  w-13/14 p-1">
+          <li className="h-10 flex items-center bg-gray-200 dark:bg-gray-600 rounded-lg  w-13/14 p-1">
             <Link
               to="/profile/user123"
               className="flex justify-between items-center w-full"
