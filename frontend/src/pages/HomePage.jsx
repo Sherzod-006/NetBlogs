@@ -39,7 +39,7 @@ const HomePage = () => {
               </button>
               <button
                 onClick={() => {
-                  setIsComment(true);
+                  setIsComment(!isComment);
                 }}
                 className="hover:text-red-500 focus:text-red-500 font-bold"
               >
