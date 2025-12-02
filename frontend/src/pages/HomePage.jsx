@@ -52,7 +52,7 @@ const HomePage = () => {
               </button>
             </main>
           </div>
-          <form className="relative hidden">
+          <form className={`${isComment ? "block" : "hidden"} relative `}>
             <input
               type="text"
               placeholder="Add a comment..."
