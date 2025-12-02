@@ -32,7 +32,7 @@ const HomePage = () => {
                 />
               </section>
             </main>
-            <main className="hidden  md:flex flex-row md:flex-col mx-auto md:items-start my-2 md:my-auto space-x-6 md:space-y-6 text-md md:text-xl">
+            <main className="flex flex-row md:flex-col mx-auto md:items-start my-2 md:my-auto space-x-6 md:space-y-6 text-md md:text-xl">
               <button className="hover:text-red-500 focus:text-red-500 font-bold">
                 <FontAwesomeIcon icon={faHeart} />
                 Like
@@ -67,7 +67,7 @@ const HomePage = () => {
           </form>
         </li>
       </ul>
-      <main className="bg-white dark:bg-gray-700 text-black dark:text-white h-170  md:h-130 md:w-2/4 m-1 md:m-3 rounded-lg shadow-lg p-2 md:p-3">
+      <main className="hidden md:block bg-white dark:bg-gray-700 text-black dark:text-white h-170  md:h-130 md:w-2/4 m-1 md:m-3 rounded-lg shadow-lg p-2 md:p-3">
         <div className="flex space-x-2">
           <input
             type="text"
