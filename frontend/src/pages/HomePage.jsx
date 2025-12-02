@@ -6,8 +6,11 @@ import {
   faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const HomePage = () => {
+  const [isComment, setIsComment] = useState(false);
+
   return (
     <main className="flex flex-col md:flex-row">
       <ul className="bg-white dark:bg-gray-700 text-black dark:text-white h-170  md:h-130 md:w-2/4 m-1 md:m-3 rounded-lg shadow-lg p-2 md:p-3 overflow-auto">
@@ -34,7 +37,12 @@ const HomePage = () => {
                 <FontAwesomeIcon icon={faHeart} />
                 Like
               </button>
-              <button className="hover:text-red-500 focus:text-red-500 font-bold">
+              <button
+                onClick={() => {
+                  !setIsComment();
+                }}
+                className="hover:text-red-500 focus:text-red-500 font-bold"
+              >
                 <FontAwesomeIcon icon={faComment} />
                 Comment
               </button>
@@ -44,7 +52,7 @@ const HomePage = () => {
               </button>
             </main>
           </div>
-          <form className="relative">
+          <form className="relative hidden">
             <input
               type="text"
               placeholder="Add a comment..."
